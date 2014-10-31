@@ -25,17 +25,19 @@
 
 <form onsubmit="return post_form(this, 'share')" method="post"
       id="sharelink_${thing.link_name}"
-      class="pretty-form sharelink" action="/post/share"
+      class="pretty-form sharelink" action="/post/share">
      ${"" if thing.link_name else "style='display:none'"}>
   <div class="clearleft"></div>
     ${error_field("RATELIMIT", "ratelimit")}
     <input type="hidden" name="parent" value="${thing.link_name}"/>
     <table class="sharetable preftable">
       <tr class="">
-        <th>
-          <label for="share_to_${thing.link_name}">
+          <div class="socialmedia">
+              <img src="/home/niel/Skrivbord/facebook.png" alt="Facebook pic" height="5" width="5">
+           </div>
+            <label for="share_to_${thing.link_name}">
             ${_("send this link to")}
-          </label>&nbsp;
+            </label>&nbsp;
           <span class="little gray">
             ${_("(list of emails or usernames)")}
           </span>
