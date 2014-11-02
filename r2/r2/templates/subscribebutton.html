@@ -24,13 +24,13 @@
 
 ${toggle_button(
     class_name="subscribe-button fancy-toggle-button",
-    title=_("subscribe"),
+    title=_("subscribeeeee"),
     alt_title=_("unsubscribe"),
     callback="subscribe('%s')" % thing.sr._fullname,
     cancelback="unsubscribe('%s')" % thing.sr._fullname,
     css_class="add",
     alt_css_class="remove",
     reverse=thing.sr.subscriber,
-    login_required=False,
+    login_required=True,
     data_attrs=thing.data_attrs,
 )}
