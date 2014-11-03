@@ -34,7 +34,7 @@ def random_word(min, max):
                          for x
                          in range(random.randint(min, max)) ])
 
-def populate(num_srs = 10, num_users = 1000, num_links = 100, num_comments = 20, num_votes = 50):
+def populate(num_srs = 10, num_users = 100, num_links = 10, num_comments = 20, num_votes = 50):
     try:
         a = Account._by_name(g.system_user)
     except NotFound:
@@ -66,7 +66,7 @@ def populate(num_srs = 10, num_users = 1000, num_links = 100, num_comments = 20,
         accounts.append(a)
 
     for i in range(num_links):
-        id = random.uniform(1,100)
+        id = random.uniform(1,20)
         title = url = 'http://google.com/?q=' + str(id)
         user = random.choice(accounts)
         sr = random.choice(srs)
@@ -87,7 +87,7 @@ def populate(num_srs = 10, num_users = 1000, num_links = 100, num_comments = 20,
                 another_user = random.choice(accounts)
                 queries.queue_vote(another_user, c, True, '127.0.0.1')
 
-        like = random.randint(50,100)
+        like = random.randint(2,10)
         for i in range(int(random.betavariate(2, 8) * 5 * num_votes)):
            user = random.choice(accounts)
            queries.queue_vote(user, l, random.randint(0, 100) <= like, '127.0.0.1')
