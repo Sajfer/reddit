@@ -32,6 +32,16 @@
     <input type="hidden" name="parent" value="${thing.link_name}"/>
     <table class="sharetable preftable">
       <tr class="">
+          <th>
+              ${_("hello")}
+              <label for="share_to_${thing.link_name}">
+            ${_("send this link to")}
+          </label>&nbsp;
+          <span class="little gray">
+            ${_("(list of emails or usernames)")}
+          </span>
+          </th>>
+
         <th>
           <label for="share_to_${thing.link_name}">
             ${_("send this link to")}
