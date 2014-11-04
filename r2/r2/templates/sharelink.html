@@ -32,6 +32,10 @@
     <input type="hidden" name="parent" value="${thing.link_name}"/>
     <table class="sharetable preftable">
       <tr class="">
+          <th>
+              ${_("send this link to")}
+              ${_("send this link to")}
+          </th>>
         <th>
           <label for="share_to_${thing.link_name}">
             ${_("send this link to")}
@@ -117,7 +121,10 @@
           <button type="submit" class="btn">
             ${_("share")}
           </button>
-          
+          <button class="btn"
+                  onclick="return cancelShare(this);">
+            ${_("cancel")}
+          </button>
 
           <span class="status error"></span>
         </td>
