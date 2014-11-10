@@ -491,6 +491,8 @@
     onclick="return ${nameFunc}(this)">${title}</a>
 </%def>
 
+##SUBSCRIBEBUTTON##
+
 <%def name="toggle_button(class_name, title, alt_title, 
                     callback, cancelback, 
                     css_class = '', alt_css_class = '',
@@ -508,6 +510,7 @@
  <a class="option active ${css_class} ${extra_class}" href="#" tabindex="100"
     %if not login_required or c.user_is_loggedin:
       onclick="return toggle(this, ${callback}, ${cancelback})"
+      alert("hej")
     %endif
     >
    %if title:
@@ -525,6 +528,8 @@
  </a>
 </span>
 </%def>
+
+###
 
 ### originally in commentbutton
 <%def name="comment_button(name, link_text, link,\
