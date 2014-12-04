@@ -306,6 +306,7 @@ function subscribe(reddit_name) {
 
 function unsubscribe(reddit_name) {
     return function() { 
+	alert("you are now unsubscribed");
         if (reddit.logged) {
             if (reddit.cur_site == reddit_name) {
                 $('body').removeClass('subscriber');
